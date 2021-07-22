@@ -72,6 +72,7 @@ function operate(operator,num1,num2){
     })
     
     equal.addEventListener('click', () => {
+        if(operator == null)return;
             digit2 = parseFloat(screen.textContent);
             answer = operate(operator, digit, digit2);
             screen.textContent = answer;
