@@ -5,15 +5,18 @@
         <link rel="stylesheet" href="style.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
         rel="stylesheet">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap');
+        </style>
         <script src="calc.js" defer></script>
     </head>
     <body>
         <div id="main-container">
             <div id="display"></div>
             <div id="buttons">
-                <button class="clear operator">AC</button>
-                <button class="backspace operator"><i class="material-icons" id="backspace">backspace</i></button>
-                <button class="operator percentage" value="%">%</button>
+                <button class="clear clearBackP">AC</button>
+                <button class="backspace clearBackP"><i class="material-icons" id="backspace">backspace</i></button>
+                <button class="percentage clearBackP" value="%">%</button>
                 <button class="operator divide" value="/">/</button>
                 <button class="digit" value="7">7</button>
                 <button class="digit" value="8">8</button>
@@ -28,8 +31,8 @@
                 <button class="digit" value="3">3</button>
                 <button class="operator add" value="+">+</button>
                 <button class="digit" value="0">0</button>
-                <button class="dot digit" value=".">.</button>
-                <button class="equal" value="=">=</button>
+                <button class="dot" value=".">.</button>
+                <button class="equal" id="equal" value="=">=</button>
             </div>
         </div>
     </body>
