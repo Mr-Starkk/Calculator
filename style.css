@@ -1,5 +1,6 @@
 html{
     font-family: 'Signika Negative', sans-serif;
+    
 }
 
 body{
@@ -19,6 +20,7 @@ body{
     border: 15px dotted rgb(51, 95, 124);
     filter: drop-shadow(0 0 1rem rgb(82, 82, 82));
     background: steelblue;
+    transition: 1s linear;
 }
 #display{
     background: rgb(56, 56, 56);
