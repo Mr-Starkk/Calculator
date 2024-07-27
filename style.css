@@ -1,34 +1,42 @@
-html{
+html {
     font-family: 'Signika Negative', sans-serif;
-    
+
 }
 
-body{
+body {
     display: flex;
+    height: 100vh;
     justify-content: center;
-    margin-top: 5%;
-    background: radial-gradient( rgb(148, 147, 140),rgb(245, 241, 241), rgb(148, 147, 140));
+    align-items: center;
+    background: radial-gradient(rgb(148, 147, 140), rgb(245, 241, 241), rgb(148, 147, 140));
 }
-#backspace{
+
+#backspace {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 30px;
 }
-#main-container{
+
+#main-container {
     display: flex;
     flex-direction: column;
+    flex-shrink: 0;
     height: 550px;
     max-width: 500px;
-    border: 15px dotted rgb(51, 95, 124);
+    border: 15px solid rgb(51, 95, 124);
     filter: drop-shadow(0 0 1rem rgb(82, 82, 82));
     background: steelblue;
-    transition: 1s linear;
+    transition: 0.4s linear;
 }
-#display{
+
+#display {
     background: rgb(56, 56, 56);
     border: 5px solid rgb(19, 18, 18);
     border-radius: 15px;
     margin: 5px;
     margin-bottom: 4px;
-    filter: drop-shadow(0 0 0.9rem crimson);
+    filter: drop-shadow(0 0 0.9rem rgb(235, 101, 52));
     height: 20%;
     font-family: 'Signika Negative', sans-serif;
     font-size: 4rem;
@@ -36,78 +44,91 @@ body{
     justify-content: flex-end;
     align-items: center;
 }
-#buttons{
+
+#buttons {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     filter: drop-shadow(0 0 0.3rem rgb(44, 44, 44));
 
 }
-#buttons > button{
+
+#buttons>button {
     min-width: 120px;
     min-height: 81.3px;
     margin: 2px;
     border-radius: 8px;
 }
-#buttons > button[value *= "0"]{
+
+#buttons>button[value *="0"] {
     min-width: 242px;
 }
-#buttons > button.digit{
+
+#buttons>button.digit {
     background: rgb(56, 56, 56);
     color: rgb(235, 101, 52);
     font-family: 'Signika Negative', sans-serif;
     font-size: 2em;
     border: 4px solid rgb(34, 34, 34);
 }
-#buttons > button.digit:hover{
+
+#buttons>button.digit:hover {
     color: rgb(156, 54, 17);
     transform: scale(1.02);
 
 }
-#buttons > button.operator{
+
+#buttons>button.operator {
     background: rgba(235, 101, 52);
     font-family: 'Signika Negative', sans-serif;
     font-size: 1.8rem;
     border: 4px solid rgba(180, 70, 22);
 }
-#buttons > button.operator:hover{
-    background: rgba(220, 20, 60,0.8);
+
+#buttons>button.operator:hover {
+    background: rgba(220, 20, 60, 0.8);
     border: 4px solid rgb(20, 20, 20);
     transform: scale(1.02);
     filter: drop-shadow(0 0 0.4rem crimson);
 }
-#buttons > button.equal{
+
+#buttons>button.equal {
     background: rgb(60, 179, 113);
     font-size: 2rem;
     font-weight: 400;
     border: 4px solid rgb(16, 97, 52);
 }
-#buttons > button.equal:hover{
+
+#buttons>button.equal:hover {
     background: rgb(7, 212, 99);
     transform: scale(1.02);
     border: 4px solid rgb(20, 20, 20);
 
 }
-#buttons > button.clearBackP{
+
+#buttons>button.clearBackP {
     background: rgba(235, 101, 52);
     font-family: 'Signika Negative', sans-serif;
     font-size: 1.8rem;
     border: 4px solid rgba(180, 70, 22);
 }
-#buttons > button.clearBackP:hover{
-    background: rgba(220, 20, 60,0.8);
+
+#buttons>button.clearBackP:hover {
+    background: rgba(220, 20, 60, 0.8);
     border: 4px solid rgb(20, 20, 20);
     transform: scale(1.02);
     filter: drop-shadow(0 0 0.4rem crimson);
 }
-#buttons > button.dot{
+
+#buttons>button.dot {
     background: rgb(56, 56, 56);
     color: rgb(235, 101, 52);
     font-family: 'Signika Negative', sans-serif;
     font-size: 2em;
     border: 4px solid rgb(34, 34, 34);
 }
-#buttons > button.dot:hover{
+
+#buttons>button.dot:hover {
     color: rgb(156, 54, 17);
     transform: scale(1.02);
 
