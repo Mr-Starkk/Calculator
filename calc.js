@@ -5,7 +5,6 @@ const clearButton = document.querySelector('.clear');
 const backButton = document.querySelector('.backspace');
 const dotButton = document.querySelector('.dot');
 const percentButton = document.querySelector('.percentage');
-
 let digit = null;
 let digit2 = null;
 let operator = null;
@@ -27,23 +26,28 @@ function operate(operator, num1, num2) {
 }
 
 buttons.querySelectorAll('.digit').forEach((button) => {
-    button.addEventListener('click', () => {
-        if (displaySwitch == true) {
-            if (digit == undefined) {
-                //digit turns undefined at equal.addEventListener()
-                //this clears the screen if a digit is pressed after that.
-                screen.textContent = '';
-                digit = null;
-                digit2 = null;
-                operator = null;
-                answer = null;
-            }
-            screen.textContent = '';
-            displaySwitch = false;
-        }
-        screen.textContent += `${button.value}`;
+    button.addEventListener('click', digitButtonHandler);
+    document.addEventListener('keypress', (event) => {
+
     })
 })
+
+function digitButtonHandler() {
+    if (displaySwitch == true) {
+        if (digit == undefined) {
+            //digit turns undefined at equal.addEventListener()
+            //this clears the screen if a digit is pressed after that.
+            screen.textContent = '';
+            digit = null;
+            digit2 = null;
+            operator = null;
+            answer = null;
+        }
+        screen.textContent = '';
+        displaySwitch = false;
+    }
+    screen.textContent += `${this.value}`;
+}
 
 buttons.querySelectorAll('.operator').forEach((button) => {
     button.addEventListener('click', () => {
@@ -100,4 +104,13 @@ dotButton.addEventListener('click', () => {
 })
 percentButton.addEventListener('click', () => {
     screen.textContent = parseInt(screen.textContent) / 100;
+})
+
+document.addEventListener('keydown', (event) => {
+    const numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '.', '+', '-', '*', '/', '=', '%', 'Backspace'];
+    console.log(event);
+    if (numbers.indexOf(event.key) != -1) {
+        const key = document.querySelector(`button[value = '${event.key}']`);
+        key.click()
+    }
 })
